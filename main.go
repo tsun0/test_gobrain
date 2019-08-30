@@ -31,4 +31,11 @@ func main() {
 	// the learning rate is set to 0.6 and the momentum factor to 0.4
 	// use true in the last parameter to receive reports about the learning error
 	ff.Train(patterns, 1000, 0.6, 0.4, true)
+
+	ff.Test(patterns)
+
+	inputs := []float64{1, 1}
+	ff.Update(inputs)
+
+	ff.Test(patterns)
 }
