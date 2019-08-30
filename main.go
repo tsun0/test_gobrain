@@ -33,9 +33,4 @@ func main() {
 	ff.Train(patterns, 1000, 0.6, 0.4, true)
 
 	ff.Test(patterns)
-
-	inputs := []float64{1, 1}
-	ff.Update(inputs)
-
-	ff.Test(patterns)
 }
