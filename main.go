@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 
 	"github.com/goml/gobrain"
@@ -33,4 +34,7 @@ func main() {
 	ff.Train(patterns, 1000, 0.6, 0.4, true)
 
 	ff.Test(patterns)
+
+	inputs := []float64{1, 1}
+	fmt.Println(ff.Update(inputs))
 }
